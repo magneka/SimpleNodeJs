@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>node.js - Demo mot SQLite - Magne Alvheim</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+     
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+</head>
+
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+    <!--script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script -->    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>      
+   
+    <!-- Toastr javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <body>
+
+
+        <div class="container">   
+            
+            <div class="jumbotron" style="background-color: #f0f4f5; padding-top: 20px"> 
+                                          
+                <div class="row">
+                    <h2>List of Employees</h2>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="employeeTable" class="table">
+                            <thead>
+                                <th>EmployeeID</th>
+                                <th>Title</th>
+                                <th>Name</th>
+                                <th>Address</th>        
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>                                                          
+                
+                <div class="row">                                        
+                    <button id="refresh" type="button" class="btn btn-primary">Refresh</button>                 
+                </div>                    
+                                  
+            </div>
+
+        </div><!-- /.container -->       
+        
+        <!-- Modal error message -->
+        <div class="modal fade" id="ajax-error-box" role="dialog">
+            <div class="modal-dialog modal-lg" class="background-color: #dff0d8">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <span id="ajax-error">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/Javascript/ajaxProxy.js"></script> 
+        <script src="/Javascript/employeeList.js"></script>   
+
+        <script type="javascript">
+            
+        </script> 
+
+        
+   
+
+    </body>
+
+</html>
